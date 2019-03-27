@@ -1,0 +1,12 @@
+  <img [src]="User.photo" [alt]="" />
+  <p> Nom : {{User.name}}</p>
+  <p> Prénom : {{User.firstName}}</p>
+  <p *ngIf="show"> Age : {{User.age}}</p>
+  <q>{{User.quote}}</q>
+  <br><br>
+
+  <input [(ngModel)]="User.quote" placeholder="Ecrit ta citation"/>
+  <br><br>
+
+  <button (click) = "toggle()" type="button">{{buttonName}}</button>
+
