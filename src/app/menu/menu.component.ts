@@ -1,0 +1,17 @@
+import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from '../app.routes';
+
+@Component({
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
+})
+export class MenuComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

@@ -13,8 +13,6 @@ export class DisplayMoviesDirective {
     }
   }
 
-
   constructor(private tplRef: TemplateRef<any>,
               private vwRef: ViewContainerRef) { }
-
 }
