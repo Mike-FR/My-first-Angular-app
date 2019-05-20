@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -10,7 +10,8 @@ import { HighlightDirective } from './highlight.directive';
 import { DisplayMoviesDirective } from './display-movies.directive';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
-import { ROUTES } from './app.routes'
+import { ROUTES } from './app.routes';
+import { SearchMovieComponent } from './search-movie/search-movie.component'
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { ROUTES } from './app.routes'
     FilmsComponent,
     HighlightDirective,
     DisplayMoviesDirective,
-    MenuComponent
+    MenuComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],

@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class FilmsComponent implements OnInit {
 
   movies = [
-  "Le Parrain",
-  "Star Wars",
-  "Avengers",
-  "Dikkenek"
+  'Le Parrain',
+  'Star Wars',
+  'Avengers',
+  'Dikkenek'
   ]
 
-  showMovies:boolean = true;
+  showMovies = true;
 
   constructor() { }
 

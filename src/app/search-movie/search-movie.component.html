@@ -1,0 +1,39 @@
+<div class="container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" #Form="ngForm">
+    <div formGroupName="id">
+      <h4>Searching ID</h4>
+      <label for="identifiant">Identifiant :</label>
+      <input type="text" formControlName="identifiant">
+      <br>
+      <label for="titre">Titre :</label>
+      <input name="titre" type="text" formControlName="titre">
+    </div>
+    <div *ngIf="Form.submitted">
+      <span *ngIf="myForm.get('id').errors">{{myForm.get('id').errors.isRequired}}</span>
+    </div>
+    <div>
+      <label>Type :</label>
+      <select formControlName="type">
+        <option value="film">Film</option>
+        <option value="serie">Série</option>
+        <option value="episode">Episode</option>
+      </select>
+    </div>
+    <div>
+      <label for="annee">Année de sortie :</label>
+      <input name="annee" type="number" formControlName="annee">
+    </div>
+    <div *ngIf="Form.submitted">
+      <span *ngIf="myForm.get('annee').errors">{{myForm.get('annee').errors.min}}</span>
+    </div>
+    <div>
+      <label>Fiche :</label>
+      <select formControlName="fiche">
+        <option value="complete">Complète</option>
+        <option value="courte">Courte</option>
+      </select>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
